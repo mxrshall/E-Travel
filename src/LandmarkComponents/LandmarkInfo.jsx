@@ -35,12 +35,14 @@ function LandInfo({ description, photo, map, sendFotka, onClick }) {
                             <br/>
                         </motion.span>
                     ))}
-                    <motion.div
+                    <motion.img
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5, duration: 0.5 }}
-                        className="w-1/2 h-[30vh] bg-contain bg-no-repeat bg-center my-10"
-                        style={{ backgroundImage: `url(${map})`}}
+                        src={map}
+                        loading="lazy"
+                        alt="Map"
+                        className="w-1/2 h-[30vh] object-contain my-10 cursor-pointer"
                         onClick={handleClickSend}
                     />
                     <motion.button
@@ -84,12 +86,14 @@ function LandInfo({ description, photo, map, sendFotka, onClick }) {
                         sendFotka={sendFotka}
                     />
                 ))}
-                <motion.div
+                <motion.img
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.5, duration: 0.5 }}
-                    className="w-full h-[30vh] bg-contain bg-no-repeat bg-center"
-                    style={{ backgroundImage: `url(${map})`}}
+                    src={map}
+                    loading="lazy"
+                    alt="Map"
+                    className="w-full h-[30vh] object-contain cursor-pointer"
                     onClick={handleClickSend}
                 />
                 <motion.button
