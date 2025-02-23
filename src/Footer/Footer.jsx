@@ -1,5 +1,4 @@
 import { LuMail } from "react-icons/lu";
-import { FiGithub } from "react-icons/fi";
 
 function Footer() {
   return (
@@ -10,7 +9,7 @@ function Footer() {
                 ©2025 Martin Krajčovič All rights reserved.
             </h1>
         </div>
-        <div className="w-1/6 h-full flex justify-end items-center gap-3 my-2 md:my-0">
+        <div className="w-1/6 h-full flex justify-center items-center gap-0 my-2 md:my-0 md:justify-end md:gap-3">
           <a href="mailto:2821619@ucm.sk">
             <LuMail color="white" size={20} />
           </a>

@@ -83,7 +83,7 @@ function Homepage({ slider, list }) {
   // Define transforms for parallax layers
   const layer2Y = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
   const layer3Y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const layer4Y = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
+  const layer4Y = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
   const layer5Y = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
 
   const lenis = useLenis(({ scroll }) => {
@@ -173,13 +173,16 @@ function Homepage({ slider, list }) {
       <ReactLenis root>
       <div className='w-full h-[400vh] flex flex-col'>
         <div className='w-full h-[100vh] relative' ref={addToRefs}>
-          <motion.div 
-            className="w-full h-full bg-cover bg-center flex justify-center items-center absolute z-[1]"
-            style={{ backgroundImage: `url(${image1})` }}
+          <motion.img 
+            className="w-full h-full object-cover absolute z-[1]"
+            src={image1}
+            loading="eager"
           />
-          <motion.div 
-            className="w-full h-full bg-cover bg-center flex justify-center items-center absolute z-[2]"
-            style={{ backgroundImage: `url(${image4})`, y: layer2Y }}
+          <motion.img 
+            className="w-full h-full object-cover absolute z-[2]"
+            src={image4}
+            style={{ y: layer2Y }}
+            loading="eager"
           />
           <motion.div 
             className="w-full h-full flex justify-center items-center absolute z-[3]"
@@ -189,13 +192,17 @@ function Homepage({ slider, list }) {
               E-Travel
             </h1>
           </motion.div>
-          <motion.div 
-            className="w-full h-full bg-cover bg-center flex justify-center items-center absolute z-[4]"
-            style={{ backgroundImage: `url(${image3})`, y: layer4Y }}
+          <motion.img 
+            className="w-full h-full object-cover absolute z-[4]"
+            src={image3}
+            style={{ y: layer4Y }}
+            loading="eager"
           />
-          <motion.div 
-            className="w-full h-full bg-cover bg-center flex justify-center items-center absolute z-[5]"
-            style={{ backgroundImage: `url(${image2})`, y: layer5Y }}
+          <motion.img 
+            className="w-full h-full object-cover absolute z-[5]"
+            src={image2}
+            style={{ y: layer5Y }}
+            loading="eager"
           />
           <motion.div 
             className="w-full h-full bg-gradient-to-t from-black/90 via-black/10 to-transparent bg-gradient-[20%] absolute z-[6]"
@@ -205,7 +212,7 @@ function Homepage({ slider, list }) {
             className="w-full h-full bg-black absolute z-[7]"
             initial={{ opacity: 1 }}
             animate={isExit === true ? { opacity: 1 } : { opacity: 0 }}
-            transition={isExit === true ? { delay: 0.5, duration: 0.5 } : { duration: 0.8, delay: 0.3 }}
+            transition={isExit === true ? { delay: 0.3, duration: 0.5 } : { duration: 0.8, delay: 0.3 }}
           />
         </div>
 
