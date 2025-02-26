@@ -24,7 +24,7 @@ function LandInfo({ description, photo, map, sendFotka, onClick }) {
                 <div className="w-7/12 h-[100vh] pl-16 py-16">
                     {odstavec.map((odstavec, index) => (
                         <motion.span
-                            initial={{ opacity: 0, x: -20 }}
+                            initial={{ opacity: 0, x: -10 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.5, duration: 0.5 }}
                             key={index} 
@@ -36,7 +36,7 @@ function LandInfo({ description, photo, map, sendFotka, onClick }) {
                         </motion.span>
                     ))}
                     <motion.img
-                        initial={{ opacity: 0, x: -20 }}
+                        initial={{ opacity: 0, x: -10 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5, duration: 0.5 }}
                         src={map}
@@ -46,7 +46,7 @@ function LandInfo({ description, photo, map, sendFotka, onClick }) {
                         onClick={handleClickSend}
                     />
                     <motion.button
-                        initial={{ opacity: 0, x: -20 }}
+                        initial={{ opacity: 0, x: -10 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.5, duration: 0.5 }}
                         onClick={handleClick} 

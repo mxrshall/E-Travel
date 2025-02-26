@@ -275,9 +275,10 @@ function Homepage({ slider, list }) {
             </div>
             <div className='w-full h-[100vh] flex items-center overflow-hidden bg-cover bg-center relative md:items-stretch' ref={addToRefs}>
               {background && !isExit && (
-                <motion.div
+                <motion.img
                   className="hidden inset-0 absolute w-full h-full object-cover md:inline"
-                  style={{ backgroundImage: `url(${background})` }}
+                  src={background}
+                  loading="eager"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8 }}
