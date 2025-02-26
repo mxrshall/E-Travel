@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
@@ -173,6 +174,12 @@ function Homepage({ slider, list }) {
       <ReactLenis root>
       <div className='w-full h-[400vh] flex flex-col'>
         <div className='w-full h-[100vh] relative' ref={addToRefs}>
+          <Helmet>
+            <link rel="preload" href={image1} as="image" />
+            <link rel="preload" href={image2} as="image" />
+            <link rel="preload" href={image3} as="image" />
+            <link rel="preload" href={image4} as="image" />
+          </Helmet>
           <motion.img 
             className="w-full h-full object-cover absolute z-[1]"
             src={image1}
