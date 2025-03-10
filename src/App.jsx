@@ -5,10 +5,10 @@ import Landmark from "./Pages/Landmark";
 import Gallery from "./Pages/Gallery";
 import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 
-import header1 from "../public/images/header/header1.webp"
-import header2 from "../public/images/header/header2.webp"
-import header3 from "../public/images/header/header3.webp"
-import header4 from "../public/images/header/header4.webp"
+import header1 from "../public/images/photos/Gyeongju/Gyeongju.webp"
+import header2 from "../public/images/photos/TheMatterhorn/TheMatterhorn1.webp"
+import header3 from "../public/images/photos/QuebecCity/QuebecCity.webp"
+import header4 from "../public/images/photos/KrugerNationalPark/KrugerNationalPark1.webp"
 
 import korea from "../public/images/flags/korea.png";
 import svajciarsko from "../public/images/flags/switzerland.png";
@@ -17,7 +17,6 @@ import afrika from "../public/images/flags/africa.png";
 
 //Južná Kórea
 import Seoul from "../public/images/photos/Seoul/Seoul.webp";
-import Seoul1 from "../public/images/photos/Seoul/Seoul1.webp"
 import Seoul2 from "../public/images/photos/Seoul/Seoul2.webp"
 import Seoul3 from "../public/images/photos/Seoul/Seoul3.webp"
 import SeoulMap from "../public/images/map/SeoulMap.webp"
@@ -31,14 +30,12 @@ import Gyeongju2 from "../public/images/photos/Gyeongju/Gyeongju2.webp"
 import GyeongjuMap from "../public/images/map/GyeongjuMap.webp"
 //Švajčiarsko
 import ChateaudeChillon from "../public/images/photos/ChateaudeChillon/ChateaudeChillon.webp"
-import ChateaudeChillon1 from "../public/images/photos/ChateaudeChillon/ChateaudeChillon1.webp"
 import ChateaudeChillon2 from "../public/images/photos/ChateaudeChillon/ChateaudeChillon2.webp"
 import ChateaudeChillon3 from "../public/images/photos/ChateaudeChillon/ChateaudeChillon3.webp"
 import ChateaudeChillonMap from "../public/images/map/ChateaudeChillonMap.webp"
 import TheMatterhorn from "../public/images/photos/TheMatterhorn/TheMatterhorn.webp"
 import TheMatterhorn1 from "../public/images/photos/TheMatterhorn/TheMatterhorn1.webp"
 import TheMatterhorn2 from "../public/images/photos/TheMatterhorn/TheMatterhorn2.webp"
-import TheMatterhorn3 from "../public/images/photos/TheMatterhorn/TheMatterhorn3.webp"
 import TheMatterhornMap from "../public/images/map/TheMatterhornMap.webp"
 import RhineFalls from "../public/images/photos/RhineFalls/RhineFalls.webp"
 import RhineFalls1 from "../public/images/photos/RhineFalls/RhineFalls1.webp"
@@ -50,7 +47,6 @@ import TorngatMountains1 from "../public/images/photos/TorngatMountains/TorngatM
 import TorngatMountains2 from "../public/images/photos/TorngatMountains/TorngatMountains2.webp"
 import TorngatMountainsMap from "../public/images/map/TorngatMountainsMap.webp"
 import QuebecCity from "../public/images/photos/QuebecCity/QuebecCity.webp"
-import QuebecCity1 from "../public/images/photos/QuebecCity/QuebecCity1.webp"
 import QuebecCity2 from "../public/images/photos/QuebecCity/QuebecCity2.webp"
 import QuebecCity3 from "../public/images/photos/QuebecCity/QuebecCity3.webp"
 import QuebecCityMap from "../public/images/map/QuebecCityMap.webp"
@@ -116,7 +112,7 @@ function App() {
       title: "Seoul",
       background: Seoul,
       description: "Seoul is a vibrant city that blends rich history with modern urban life. As the capital of South Korea, it is a breathtaking metropolis offering countless experiences for visitors from around the world. Seoul is home to a rich Korean culture and arts scene. Enjoy traditional Korean tea in one of the many teahouses or try authentic Korean dishes like kimchi, bulgogi, or bibimbap in local restaurants. Additionally, you can visit stunning theaters and galleries that showcase the country’s rich cultural heritage.",
-      photo: [Seoul1, Seoul2, Seoul3],
+      photo: [Seoul, Seoul2, Seoul3],
       map: SeoulMap,
       tag: ["all", "korea", "mesto"],
     },
@@ -148,7 +144,7 @@ function App() {
       title: "Chateau de Chillon",
       background: ChateaudeChillon,
       description: "Château de Chillon is a stunning castle located on the shores of Lake Geneva near Montreux, Switzerland. It is a fascinating historical landmark that offers a unique glimpse into the past and breathtaking views of the Alps. Château de Chillon provides magnificent panoramas of Lake Geneva and the surrounding mountains, allowing visitors to enjoy spectacular views from its windows and towers, making the visit truly unforgettable.",
-      photo: [ChateaudeChillon1, ChateaudeChillon2, ChateaudeChillon3],
+      photo: [ChateaudeChillon, ChateaudeChillon2, ChateaudeChillon3],
       map: ChateaudeChillonMap,
       tag: ["all", "svajciarsko", "pamiatka", "priroda"],
     },
@@ -156,7 +152,7 @@ function App() {
       title: "The Matterhorn",
       background: TheMatterhorn,
       description: "Matterhorn is a majestic peak located in the Alps on the border between Switzerland and Italy, and it is one of the most famous and iconic mountains in the world. It is a fascinating destination for tourists and visitors, offering breathtaking natural scenery, hiking, and unforgettable experiences. Beyond its natural beauty, Matterhorn is also part of the rich cultural heritage of the Alpine region. Visitors can explore traditional mountain villages, local festivals, and cultural events that reflect the life and traditions of the Alpine people.",
-      photo: [TheMatterhorn1, TheMatterhorn2, TheMatterhorn3],
+      photo: [TheMatterhorn, TheMatterhorn1, TheMatterhorn2],
       map: TheMatterhornMap,
       tag: ["all", "svajciarsko", "priroda", "studena"],
     },
@@ -180,7 +176,7 @@ function App() {
       title: "Quebec City",
       background: QuebecCity, 
       description: "Québec City is one of the most distinctive and beautiful historic cities in North America. Located on the banks of the St. Lawrence River in the Canadian province of Québec, it is a fascinating destination with a rich cultural heritage, stunning architecture, and a unique atmosphere. In addition to its historical significance, Québec City offers breathtaking natural beauty. Visitors can stroll through scenic parks like the Plains of Abraham or take a trip to the nearby Île d'Orléans, where they will find picturesque countryside and charming vineyards.",
-      photo: [QuebecCity1, QuebecCity2, QuebecCity3],
+      photo: [QuebecCity, QuebecCity2, QuebecCity3],
       map: QuebecCityMap,
       tag: ["all", "kanada", "mesto"],
     },
