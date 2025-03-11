@@ -3,6 +3,7 @@ import Location from "./Pages/Location";
 import Catalog from "./Pages/Catalog";
 import Landmark from "./Pages/Landmark";
 import Gallery from "./Pages/Gallery";
+import Link from "./Footer/Link";
 import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 
 import header1 from "../public/images/photos/Gyeongju/Gyeongju.webp"
@@ -214,6 +215,7 @@ function App() {
         <Route path="/lokacia" element={<Location />} />
         <Route path="/katalog" element={<Catalog slider={slider}/>} />
         <Route path="/galeria" element={<Gallery slider={slider}/>} />
+        <Route path="/link" element={<Link />} />
       </Routes>
     </HashRouter>
   );
